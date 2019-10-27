@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  ansible:
+    image: petekaik/ansible-openssh
+    volumes:
+      - ${ANSIBLE}:/etc/ansible
+      - ${SSH}:/root/.ssh
+    container_name: ansible
+    hostname: ansible
+    stdin_open: true
+    tty: true
